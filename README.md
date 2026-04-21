@@ -2,7 +2,7 @@
 
 A modern, Desmos-style graphing calculator that runs entirely in the browser. No backend, no external math libraries, just a hand-written parser and a Canvas 2D renderer.
 
-> Live preview: [shakedmathcore.vercel.app](https://shakedmathcore.vercel.app)
+> Live preview: [shaked-math-core.vercel.app/](https://shaked-math-core.vercel.app/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-18-61DAFB.svg)](https://react.dev)
