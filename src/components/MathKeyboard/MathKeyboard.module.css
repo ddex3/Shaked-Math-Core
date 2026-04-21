@@ -1,0 +1,48 @@
+.keyboard {
+  position: fixed;
+  bottom: 40vh;
+  left: 0;
+  right: 0;
+  background: #242424;
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 30;
+  border-top: 1px solid #333;
+}
+
+@media (max-width: 767px) {
+  .keyboard {
+    display: flex;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 4px;
+}
+
+.key {
+  flex: 1;
+  min-height: 38px;
+  background: #3a3a3a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  cursor: pointer;
+}
+
+.key:active {
+  background: #555;
+}
+
+.keyWide {
+  flex: 2;
+}
+
+.keyFn {
+  background: #2d70b3;
+}

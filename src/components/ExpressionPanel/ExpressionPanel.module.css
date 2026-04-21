@@ -1,0 +1,408 @@
+.panel {
+  width: 320px;
+  background: #ffffff;
+  color: #222;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-right: 1px solid #d1d1d1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: width 0.28s cubic-bezier(0.22, 0.61, 0.36, 1),
+              height 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.panelMini {
+  width: 56px;
+}
+
+.fullContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 320px;
+  min-height: 0;
+  animation: fadeIn 0.22s ease 0.06s both;
+}
+
+.miniContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 0;
+  gap: 4px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  animation: fadeIn 0.22s ease 0.06s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.miniBtn {
+  width: 40px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.12s;
+}
+
+.miniBtn:hover {
+  background: #eee;
+}
+
+.miniDivider {
+  width: 28px;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 2px 0;
+}
+
+.miniList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.miniIconBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.12s;
+}
+
+.miniIconBtn:hover {
+  background: #f3f3f3;
+}
+
+.miniSettingsWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingsPopoverMini {
+  top: 4px;
+  left: calc(100% + 6px);
+  right: auto;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 8px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #d1d1d1;
+  height: 42px;
+}
+
+.toolbarBtn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.12s;
+}
+
+.toolbarBtn:hover {
+  background: #e5e5e5;
+}
+
+.toolbarBtn:disabled {
+  color: #c0c0c0;
+  cursor: default;
+}
+
+.toolbarBtn:disabled:hover {
+  background: transparent;
+}
+
+.toolbarSpacer {
+  flex: 1;
+}
+
+.toolbarBtnActive {
+  background: #e5e5e5;
+  color: #222;
+}
+
+.settingsWrap {
+  position: relative;
+}
+
+.settingsPopover {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  min-width: 180px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settingRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.settingRow:hover {
+  background: #f3f3f3;
+}
+
+.settingRow input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.settingDivider {
+  height: 1px;
+  background: #e4e4e4;
+  margin: 4px 0;
+}
+
+.settingBtn {
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.settingBtn:hover {
+  background: #f3f3f3;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  min-height: 44px;
+  border-bottom: 1px solid #e4e4e4;
+  position: relative;
+}
+
+.row:hover {
+  background: #fafafa;
+}
+
+.row:hover .closeBtn {
+  opacity: 1;
+}
+
+.rowNumber {
+  width: 26px;
+  flex-shrink: 0;
+  background: #f0f0f0;
+  color: #888;
+  font-size: 11px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4px;
+  border-right: 1px solid #e4e4e4;
+  user-select: none;
+}
+
+.iconBox {
+  width: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-right: 1px solid #e4e4e4;
+}
+
+.iconInner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.12s, background 0.12s;
+}
+
+.iconInnerHidden {
+  opacity: 0.35;
+}
+
+.inputBox {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px 8px 10px;
+}
+
+.input {
+  font-family: 'Cambria Math', 'STIX Two Math', 'Latin Modern Math', Cambria, Georgia, serif;
+  font-size: 17px;
+  color: #111;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  min-height: 22px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+.input:empty::before {
+  content: '';
+}
+
+.inputError {
+  text-decoration: underline wavy #e06060;
+  text-underline-offset: 3px;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 11px;
+  margin-top: 4px;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #b0b0b0;
+  cursor: pointer;
+  width: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 6px;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.12s;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  color: #555;
+}
+
+.emptyRow {
+  display: flex;
+  align-items: stretch;
+  min-height: 44px;
+  cursor: text;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 35%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, #000 35%, transparent 100%);
+}
+
+.emptyRow:hover {
+  background: #fafafa;
+}
+
+.emptyRow .rowNumber {
+  color: #8c8c8c;
+}
+
+.emptyPlaceholder {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .panel {
+    width: 100%;
+    height: 50vh;
+    flex-shrink: 0;
+    border-right: none;
+    border-top: 1px solid #d1d1d1;
+  }
+
+  .panelMini {
+    width: 100%;
+    height: 48px;
+  }
+
+  .panelMini .miniContent {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .panelMini .miniDivider {
+    width: 1px;
+    height: 28px;
+    margin: 0 2px;
+  }
+
+  .panelMini .miniList {
+    flex-direction: row;
+    width: auto;
+    padding-top: 0;
+    padding-left: 4px;
+  }
+
+  .fullContent {
+    min-width: 0;
+    min-height: 320px;
+  }
+
+  .chevronMobile {
+    transform: rotate(-90deg);
+  }
+
+  .settingsPopoverMini {
+    top: auto;
+    bottom: calc(100% + 8px);
+    left: auto;
+    right: 0;
+  }
+}
