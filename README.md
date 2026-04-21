@@ -117,7 +117,7 @@ src/
 ## Support
 
 - Report bugs or request features on the [issue tracker](https://github.com/ddex3/Shaked-Math-Core/issues).
-- Check the [live demo](https://shakedmathcore.vercel.app) to see the latest deployed version.
+- Check the [live demo](https://shaked-math-core.vercel.app) to see the latest deployed version.
 
 ## License
 
