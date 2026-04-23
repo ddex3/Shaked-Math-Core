@@ -355,6 +355,50 @@
   flex: 1;
 }
 
+.credits {
+  flex-shrink: 0;
+  padding: 10px 14px 12px;
+  background: #ffffff;
+  border-top: 1px solid #e4e4e4;
+  font-size: 11px;
+  color: #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.creditsTop {
+  color: #777;
+}
+
+.creditsName {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.12s;
+}
+
+.creditsName:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.creditsRepo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.12s;
+}
+
+.creditsRepo:hover {
+  color: #111;
+}
+
 @media (max-width: 767px) {
   .panel {
     width: 100%;

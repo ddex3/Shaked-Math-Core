@@ -76,6 +76,13 @@ function XIcon() {
     </svg>
   );
 }
+function GitHubIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.55-.3-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.1-.12-.3-.51-1.49.11-3.1 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.61.23 2.8.11 3.1.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.37-5.26 5.66.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+    </svg>
+  );
+}
 
 interface RowProps {
   expr: Expression;
@@ -260,6 +267,15 @@ export function ExpressionPanel() {
               </div>
             )}
           </div>
+          <a
+            href="https://github.com/ddex3/Shaked-Math-Core"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.miniBtn}
+            title="Source on GitHub (@ddex3 / Shaked-Math-Core)"
+          >
+            <GitHubIcon size={18} />
+          </a>
           <div className={styles.miniDivider} />
           <div className={styles.miniList}>
             {expressions.map((expr) => (
@@ -362,6 +378,29 @@ export function ExpressionPanel() {
               <div className={styles.emptyPlaceholder} />
             </div>
           </div>
+          <footer className={styles.credits}>
+            <div className={styles.creditsTop}>
+              Built by{' '}
+              <a
+                href="https://github.com/ddex3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.creditsName}
+              >
+                Shaked Angel
+              </a>
+            </div>
+            <a
+              href="https://github.com/ddex3/Shaked-Math-Core"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.creditsRepo}
+              title="View source on GitHub"
+            >
+              <GitHubIcon size={12} />
+              <span>github.com/ddex3</span>
+            </a>
+          </footer>
         </div>
       )}
     </div>
